@@ -1,0 +1,179 @@
+<!--this file sheet is for html
+    hadif hashim-->
+<!DOCType html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MarketPlace 2st | Itwem</title>
+        <link rel="stylesheet" href="item.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="logo">Thrift</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <div class="user-actions">
+                    <a href="#">Account</a>
+                    <a href="#">Wishlist</a>
+                    <a href="#">Cart</a>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <aside class="sidebar">
+                    <h3>Categories</h3>
+                    <ul class="categories">
+                        <li><a href="#" class="active">All Products</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-laptop"></i> Electronics</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-tshirt"></i> Fashion</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-utensils"></i> Food</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-heart"></i> Beauty & Health</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-dumbbell"></i> Sports & Fitness</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-gamepad"></i> Toys & Games</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-gears"></i> Automotive</a></li>
+                    </ul>
+                </aside>
+
+                <main class="content-area">
+                    <div class="category-tabs">
+                        <a href="#" class="active">Featured</a>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Best Sellers</a>
+                        <a href="#">On Sale</a>
+                        <a href="#">Trending</a>
+                        <a href="#">Recommended</a>
+                    </div>
+
+                    <div class="market-container">
+                        <div class="market">
+                            <div class="market-slide">
+                                <h2>Summer Collection 2025</h2>
+                                <p>Discover our new summer lineup with exclusive discounts and fresh styles for the season.</p>
+                                <button class="btn">Shop Now</button>
+                            </div>
+                            <div class="market-slide">
+                                <h2>Tech Gadgets Sale</h2>
+                                <p>Up to 40% off on the latest electronics and smart home devices. Limited time offer!</p>
+                                <button class="btn">Explore Deals</button>
+                            </div>
+                            <div class="market-slide">
+                                <h2>Free Shipping Weekend</h2>
+                                <p>Enjoy free shipping on all orders this weekend. No minimum purchase required.</p>
+                                <button class="btn">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="market-arrow prev">&#10094;</div>
+                        <div class="market-arrow next">&#10095;</div>
+                        <div class="market-nav">
+                            <div class="market-dot active"></div>
+                            <div class="market-dot"></div>
+                            <div class="market-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="products-section">
+                        <div class="section-header">
+                            <h2>Popular Products</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">Product Image</div>
+                                <div class="product-info">
+                                    <div class="product-title">Wireless Headphones</div>
+                                    <div class="product-price">$129.99</div>
+                                    <div class="product-rating">★★★★★</div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">Product Image</div>
+                                <div class="product-info">
+                                    <div class="product-title">Smart Watch</div>
+                                    <div class="product-price">$</div>
+                                    <div class="product-rating">star here</div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">Product Image</div>
+                                <div class="product-info">
+                                    <div class="product-title">Fitness Tracker</div>
+                                    <div class="product-price">$</div>
+                                    <div class="product-rating">star here</div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">Product Image</div>
+                                <div class="product-info">
+                                    <div class="product-title">Bluetooth Speaker</div>
+                                    <div class="product-price">$</div>
+                                    <div class="product-rating">star here</div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <footer>
+                <p>&copy; Thrift 2strian copy.</p>
+            </footer>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const market = document.querySelector('.market');
+                const slides = document.querySelectorAll('.market-slide');
+                const dots = document.querySelectorAll('.market-dot');
+                const prevBtn = document.querySelector('.market-arrow.prev');
+                const nextBtn = document.querySelector('.market-arrow.next');
+                
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+                
+                function goToSlide(slideIndex) {
+                    if (slideIndex < 0) {
+                        currentSlide = totalSlides - 1;
+                    } else if (slideIndex >= totalSlides) {
+                        currentSlide = 0;
+                    } else {
+                        currentSlide = slideIndex;
+                    }
+                    
+                    market.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Update active dot
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentSlide);
+                    });
+                }
+                
+                function nextSlide() {
+                    goToSlide(currentSlide + 1);
+                }
+                
+                function prevSlide() {
+                    goToSlide(currentSlide - 1);
+                }
+                
+                // Event listeners
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+                
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => goToSlide(index));
+                });
+                
+                // Auto-advance slides every 5 seconds
+                setInterval(nextSlide, 5000);
+            });
+        </script>
+    </body>
+</html>

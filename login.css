@@ -1,0 +1,214 @@
+/*this file sheet is for css
+    hadif hashim*/
+    
+:root {
+    --primary: #1a1a1a;
+    --secondary: #2d2d2d;
+    --dark: #0d0d0d;
+    --light: #f8f9fa;
+    --accent: #d4af37;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.logo img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+.logo h2 {
+    font-size: 1.8rem;
+    background: linear-gradient(to right, var(--accent), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+
+
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(76, 201, 240, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    animation: fadeIn 0.8s ease-out;
+}
+.login-form .input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.login-form input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--light);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+.login-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.3);
+}
+.login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.inputOpt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.rememberMe input {
+    accent-color: var(--secondary);
+}
+.fgtPassword a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.fgtPassword a:hover {
+    color: var(--secondary);
+}
+
+
+.loginButt {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: var(--light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
+}
+.loginButt:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px var(--accent);
+}
+.loginButt:active {
+    transform: translateY(-1px);
+}
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.divider::before {
+    margin-right: 1rem;
+}
+.divider::after {
+    margin-left: 1rem;
+}
+
+
+.socLogin {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+.social-btn:hover {
+    transform: translateY(-3px);
+    background: var(--secondary);
+    box-shadow: 0 10px 20px var(--accent);
+}
+.register-link {
+    text-align: center;
+    font-size: 0.9rem;
+}
+.register-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.register-link a:hover {
+    color: var(--light);
+}
+
+.errMsg {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        margin: auto 1rem;
+        padding: 1.5rem;
+    }
+    .logo img {
+        height: 50px;
+    }
+}

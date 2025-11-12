@@ -1,0 +1,140 @@
+<!--this file sheet is for html
+    hadif hashim-->
+    
+<!DOCType html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marketplace 2st</title>
+        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <div class="logo">MarketPlace 2st</div>
+            <div class="userMenu">
+                <div class="userAvatar">n</div>
+                <span>nama</span>
+            </div>
+        </header>
+
+        <div class="settingCont">
+            <button class="sidebarTog" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="sidebarOver" id="sidebarOverlay"></div>
+
+            <div class="sidebar" id="sidebar">
+                <ul class="sidebarMenu">
+                    <li><a href="#" class="active"><i class="fas fa-user"></i> Profile Information</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Account Security</a></li>
+                    <li><a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Preferences</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <h1 class="section-title"><i class="fas fa-user-cog"></i> Profile Infomration</h1>
+                
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="" alt="Profile" class="avatar-img">
+                        <div class="change-avatar">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h2>nama</h2>
+                        <p>Seller since</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (128 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form>
+                    <div class="formRow">
+                        <div class="formGroup">
+                            <label for="myUsername">Username</label>
+                            <input type="text" id="myUsername" value="">
+                        </div>
+                        <div class="formGroup">
+                            <label for="myPhone">Phone Number</label>
+                            <input type="tel" id="myPhone" value="">
+                        </div>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio"></textarea>
+                    </div>
+
+                    <div class="formGroup">
+                    <label>Notification Preferences</label>
+                        <div class="notifications">
+                            <span>Email notifications</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notifications">
+                            <span>Chat notifications</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="notifications">
+                            <span>Push notifications</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn btnSave">Save Changes</button>
+                        <button type="button" class="btn btnCancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+         <script>
+        // Toggle sidebar functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            sidebarOverlay.classList.toggle('active');
+        });
+        
+        sidebarOverlay.addEventListener('click', function() {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        });
+
+        // Simple form interaction for demo purposes
+        document.querySelector('.btnSave').addEventListener('click', function() {
+            alert('Profile updated successfully!');
+        });
+        document.querySelector('.change-avatar').addEventListener('click', function() {
+            alert('Change avatar functionality would open here');
+        });
+    </script>
+
+    </body>
+</html>
