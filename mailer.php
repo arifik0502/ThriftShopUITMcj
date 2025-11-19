@@ -2,20 +2,26 @@
 /*this file sheet is for php mailer functions
     hadif hashim*/
 
+// PHPMailer temporarily disabled - logging instead
 // Download PHPMailer from: https://github.com/PHPMailer/PHPMailer
 // Place the PHPMailer folder in your project directory
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+// require 'PHPMailer/src/Exception.php';
+// require 'PHPMailer/src/PHPMailer.php';
+// require 'PHPMailer/src/SMTP.php';
 
 /**
- * Send email using PHPMailer
+ * Send email using PHPMailer (DISABLED)
  */
 function sendEmail($to, $subject, $body, $altBody = '') {
+    // Email functionality disabled - log instead
+    error_log("Email queued: To: $to, Subject: $subject");
+    return true;
+    
+    /* ORIGINAL CODE - COMMENTED OUT
     $mail = new PHPMailer(true);
 
     try {
@@ -44,12 +50,17 @@ function sendEmail($to, $subject, $body, $altBody = '') {
         error_log("Mailer Error: {$mail->ErrorInfo}");
         return false;
     }
+    */
 }
 
 /**
- * Send welcome email to new users
+ * Send welcome email to new users (DISABLED)
  */
 function sendWelcomeEmail($email, $username) {
+    error_log("Welcome email queued for: $email (Username: $username)");
+    return true;
+    
+    /* ORIGINAL CODE - COMMENTED OUT
     $subject = "Welcome to " . SITE_NAME;
     $body = "
     <html>
@@ -87,12 +98,17 @@ function sendWelcomeEmail($email, $username) {
     ";
     
     return sendEmail($email, $subject, $body);
+    */
 }
 
 /**
- * Send order confirmation email
+ * Send order confirmation email (DISABLED)
  */
 function sendOrderConfirmation($email, $username, $order_id, $total) {
+    error_log("Order confirmation queued: Email: $email, Order: $order_id, Total: $total");
+    return true;
+    
+    /* ORIGINAL CODE - COMMENTED OUT
     $subject = "Order Confirmation - #" . $order_id;
     $body = "
     <html>
@@ -127,12 +143,17 @@ function sendOrderConfirmation($email, $username, $order_id, $total) {
     ";
     
     return sendEmail($email, $subject, $body);
+    */
 }
 
 /**
- * Send ticket booking confirmation
+ * Send ticket booking confirmation (DISABLED)
  */
 function sendTicketConfirmation($email, $booking_reference, $details = []) {
+    error_log("Ticket confirmation queued: Email: $email, Reference: $booking_reference");
+    return true;
+    
+    /* ORIGINAL CODE - COMMENTED OUT
     $subject = "Ticket Booking Confirmation - " . $booking_reference;
     $body = "
     <html>
@@ -169,12 +190,17 @@ function sendTicketConfirmation($email, $booking_reference, $details = []) {
     ";
     
     return sendEmail($email, $subject, $body);
+    */
 }
 
 /**
- * Send password reset email
+ * Send password reset email (DISABLED)
  */
 function sendPasswordResetEmail($email, $username, $reset_token) {
+    error_log("Password reset queued for: $email (Username: $username)");
+    return true;
+    
+    /* ORIGINAL CODE - COMMENTED OUT
     $reset_link = SITE_URL . "reset-password.php?token=" . $reset_token;
     $subject = "Password Reset Request";
     $body = "
@@ -211,5 +237,6 @@ function sendPasswordResetEmail($email, $username, $reset_token) {
     ";
     
     return sendEmail($email, $subject, $body);
+    */
 }
 ?>
