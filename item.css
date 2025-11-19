@@ -7,20 +7,24 @@
     --dark: #0d0d0d;
     --light: #f8f9fa;
     --accent: #d4af37;
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+    --text-dark: #2c3e50;
+    --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family-primary);
+    font-weight: 400;
 }
 
 body {
     background-color: var(--secondary);
     color: var(--text-dark);
     font-family: var(--font-family-primary);
-    overflow-x:hidden ;
+    overflow-x: hidden;
 }
 
 .container {
@@ -42,7 +46,7 @@ header {
 .logo {
     color: var(--light);
     font-size: 1.8rem;
-     font-weight: 700;
+    font-weight: 700;
 }
 
 .search-bar {
@@ -97,7 +101,7 @@ header {
     transition: all 0.2s;
 }
 .categories a:hover, .categories a.active {
-    background-color:var(--secondary);
+    background-color: var(--secondary);
     color: var(--light);
 }
 .content-area {
@@ -111,25 +115,50 @@ header {
     margin-bottom: 20px;
     box-shadow: var(--shadow-lg);
     overflow-x: auto;
+    align-items: center;
+    gap: 10px;
+}
+.category-tabs form {
+    margin: 0;
+}
+.category-tabs .btn {
+    padding: 8px 15px;
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+.category-tabs .btn:hover {
+    background-color: var(--accent);
+    color: var(--light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .category-tabs a {
     padding: 8px 15px;
     text-decoration: none;
-    color:var(--dark);
+    color: var(--dark);
     border-radius: 20px;
     margin-right: 10px;
     white-space: nowrap;
     transition: all 0.2s;
 }
 .category-tabs a:hover, .category-tabs a.active {
-    background-color:var(--secondary);
+    background-color: var(--secondary);
     color: var(--light);
 }
 
 
 .market-container {
     position: relative;
-    background-color:var(--light);
+    background-color: var(--light);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -286,7 +315,7 @@ header {
     transition: background-color 0.2s;
 }
 .add-to-cart:hover {
-    background-color:var(--accent);
+    background-color: var(--accent);
 }
 
 
@@ -310,6 +339,7 @@ footer {
     
     .category-tabs {
         padding: 10px;
+        flex-wrap: wrap;
     }
     
     .market-slide {
