@@ -11,6 +11,8 @@ if (isLoggedIn()) {
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $user_id);
     mysqli_stmt_execute($stmt);
+    
+    logSecurityEvent("User logged out", "User ID: $user_id");
 }
 
 // Clear remember cookie
