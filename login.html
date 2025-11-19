@@ -1,8 +1,9 @@
 <!--this file sheet is for html
     hadif hashim-->
-<!DOCType html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MarketPlace 2st | Login</title>
         <link rel="stylesheet" href="login.css">
@@ -11,29 +12,35 @@
     <body>
         <div class="login-container">
             <div class="logo">
-                <img src="" alt="">
+                <img src="" alt="Logo">
                 <h2>login</h2>
+            </div>
+            
+            <div class="button-container">
+                <a href="main.php" class="login-btn">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
             </div>
 
             <form class="login-form" id="loginForm">
                 <div class="input">
-                <input type="text" id="myUsername" placeholder="Username" required>
-                <div class="errMsg" id="myUsernameErr">Please enter valid Username</div>
+                    <input type="text" id="myUsername" placeholder="Username" required>
+                    <div class="errMsg" id="myUsernameErr">Please enter valid Username</div>
                 </div>
 
                 <div class="input">
-                <input type="text" id="myPassword" placeholder="Password" required>
-                <div class="errMsg" id="myPasswordErr">Your Password is incorrect</div>
+                    <input type="password" id="myPassword" placeholder="Password" required>
+                    <div class="errMsg" id="myPasswordErr">Your Password is incorrect</div>
                 </div>
 
                 <div class="inputOpt">
-                <div class="rememberMe">
-                    <input type="checkbox" id="myRemember">
-                    <label for="remember">Remember me</label>
-                </div>
-                <div class="fgtPassword">
-                    <a href="#">Forgot password?</a>
-                </div>
+                    <div class="rememberMe">
+                        <input type="checkbox" id="myRemember">
+                        <label for="myRemember">Remember me</label>
+                    </div>
+                    <div class="fgtPassword">
+                        <a href="#">Forgot password?</a>
+                    </div>
                 </div>
 
                 <button type="submit" class="loginButt">Login</button>
@@ -54,6 +61,5 @@
                 <div class="register-link">New here? <a href="#">Create an Account now</a></div>
             </form>
         </div>
-
     </body>
 </html>
