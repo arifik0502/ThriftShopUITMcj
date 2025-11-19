@@ -1,10 +1,11 @@
 <!--this file sheet is for html
     hadif hashim-->
-<!DOCType html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MarketPlace 2st | Itwem</title>
+        <title>MarketPlace 2st | Item</title>
         <link rel="stylesheet" href="item.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
@@ -16,6 +17,13 @@
                     <input type="text" placeholder="Search for products...">
                 </div>
                 <div class="user-actions">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
                     <a href="#">Account</a>
                     <a href="#">Wishlist</a>
                     <a href="#">Cart</a>
@@ -30,16 +38,20 @@
                         <li><a href="#"><i class="fas fa-solid fa-laptop"></i> Electronics</a></li>
                         <li><a href="#"><i class="fas fa-solid fa-tshirt"></i> Fashion</a></li>
                         <li><a href="#"><i class="fas fa-solid fa-utensils"></i> Food</a></li>
-                        <li><a href="#"><i class="fas fa-solid fa-heart"></i> Beauty & Health</a></li>
-                        <li><a href="#"><i class="fas fa-solid fa-dumbbell"></i> Sports & Fitness</a></li>
-                        <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
-                        <li><a href="#"><i class="fas fa-solid fa-gamepad"></i> Toys & Games</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-heart"></i> Beauty &amp; Health</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-dumbbell"></i> Sports &amp; Fitness</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Books &amp; Media</a></li>
+                        <li><a href="#"><i class="fas fa-solid fa-gamepad"></i> Toys &amp; Games</a></li>
                         <li><a href="#"><i class="fas fa-solid fa-gears"></i> Automotive</a></li>
                     </ul>
                 </aside>
 
                 <main class="content-area">
                     <div class="category-tabs">
+                        <form action="return.php" method="post">
+                            <button type="submit" name="return" class="btn">Return</button>
+                        </form>
+
                         <a href="#" class="active">Featured</a>
                         <a href="#">New Arrivals</a>
                         <a href="#">Best Sellers</a>
@@ -94,8 +106,8 @@
                                 <div class="product-image">Product Image</div>
                                 <div class="product-info">
                                     <div class="product-title">Smart Watch</div>
-                                    <div class="product-price">$</div>
-                                    <div class="product-rating">star here</div>
+                                    <div class="product-price">$199.99</div>
+                                    <div class="product-rating">★★★★☆</div>
                                     <button class="add-to-cart">Add to Cart</button>
                                 </div>
                             </div>
@@ -103,8 +115,8 @@
                                 <div class="product-image">Product Image</div>
                                 <div class="product-info">
                                     <div class="product-title">Fitness Tracker</div>
-                                    <div class="product-price">$</div>
-                                    <div class="product-rating">star here</div>
+                                    <div class="product-price">$79.99</div>
+                                    <div class="product-rating">★★★★☆</div>
                                     <button class="add-to-cart">Add to Cart</button>
                                 </div>
                             </div>
@@ -112,8 +124,8 @@
                                 <div class="product-image">Product Image</div>
                                 <div class="product-info">
                                     <div class="product-title">Bluetooth Speaker</div>
-                                    <div class="product-price">$</div>
-                                    <div class="product-rating">star here</div>
+                                    <div class="product-price">$59.99</div>
+                                    <div class="product-rating">★★★★★</div>
                                     <button class="add-to-cart">Add to Cart</button>
                                 </div>
                             </div>
