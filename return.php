@@ -1,6 +1,27 @@
-<?php
-if (isset($_POST['return'])) {
-    header("Location: main.php");
-    exit();
-}
-?>
+        <?php
+        /*this file sheet is for php return
+            hadif hashim*/
+        ?>
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>MarketPlace 2st | Return</title>
+                <link rel="stylesheet" href="return.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            </head>
+            <body>
+                <div class="return-container">
+                    <div class="logo">
+                        <img src="" alt="Logo">
+                        <h2>return</h2>
+                    </div>
+
+                    <div class="button-container">
+                        <a href="main.php" class="return-btn">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                    </div>
+                </div>
+            </body>
+        </html>
