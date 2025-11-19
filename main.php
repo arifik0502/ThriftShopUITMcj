@@ -43,27 +43,27 @@ $categories_result = mysqli_query($conn, $categories_sql);
         <section class="MarketContainer">
             <div class="MarketSlide slide-1 active">
                 <div class="slide-content">
-                    <h1>Modern Design for Your Business</h1>
-                    <p>Helps beginner on making their first move.</p>
+                    <h1>Your One Stop Shop for Thrifting</h1>
+                    <p>Discover the perfect items for your style and budget.</p>
                     <a href="item.php" class="btn btn-primary">Get Started</a>
                 </div>
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg-s-msn-com.akamaized.net%2Ftenant%2Famp%2Fentityid%2FAA1Qvi8Z.img%3Fw%3D1280%26h%3D720%26m%3D4%26q%3D72&f=1&nofb=1&ipt=ab8277eefe44f06fa527a57e3c4c0eaf04ecfd954fa0fbf1014f541d376090a7');"></div>
             </div>
             <div class="MarketSlide slide-2">
                 <div class="slide-content">
-                    <h1>Responsive Across All Devices</h1>
-                    <p>Anytime, Anywhere,.</p>
+                    <h1>Responsive and User-Friendly</h1>
+                    <p>Anytime, Anywhere.</p>
                     <a href="item.php" class="btn btn-primary">Learn More</a>
                 </div>
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('path/to/your/image2.jpg');"></div>
             </div>
             <div class="MarketSlide slide-3">
                 <div class="slide-content">
-                    <h1>Powerful Features Included</h1>
-                    <p>From e-commerce to blogs, we have all the tools you need to build a successful online presence.</p>
-                    <a href="item.php" class="btn btn-primary">View Features</a>
+                    <h1>Various Items Available</h1>
+                    <p>Tickets, Electronics, Fashion, Food</p>
+                    <a href="item.php" class="btn btn-primary">View items</a>
                 </div>
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('path/to/your/image3.jpg');"></div>
             </div>
 
             <div class="MarketNav">
