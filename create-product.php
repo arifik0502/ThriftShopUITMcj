@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create_product'])) {
         $price = (float)$_POST['price'];
         $category_id = (int)$_POST['category_id'];
         $stock = (int)$_POST['stock'];
-        $condition = sanitizeInput($_POST['condition']);
         
         // Validate inputs
         if (empty($title) || empty($description) || $price <= 0 || $stock < 0) {
@@ -53,10 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create_product'])) {
             }
             
             if (empty($error)) {
-                $sql = "INSERT INTO products (user_id, category_id, title, description, price, stock, `condition`, image, created_at) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+                $sql = "INSERT INTO products (user_id, category_id, title, description, price, stock, image, created_at) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
                 $stmt = mysqli_prepare($conn, $sql);
-                mysqli_stmt_bind_param($stmt, "iissdiiss", $user_id, $category_id, $title, $description, $price, $stock, $condition, $image_name);
+                mysqli_stmt_bind_param($stmt, "iissdis", $user_id, $category_id, $title, $description, $price, $stock, $image_name);
                 
                 if (mysqli_stmt_execute($stmt)) {
                     $success = "Product created successfully!";
@@ -183,17 +182,6 @@ $user = mysqli_fetch_assoc($user_result);
                                     <?php echo htmlspecialchars($category['name']); ?>
                                 </option>
                             <?php endwhile; ?>
-                        </select>
-                    </div>
-                    <div class="formGroup">
-                        <label for="condition">Condition *</label>
-                        <select id="condition" name="condition" required>
-                            <option value="">Select Condition</option>
-                            <option value="New">New</option>
-                            <option value="Like New">Like New</option>
-                            <option value="Good">Good</option>
-                            <option value="Fair">Fair</option>
-                            <option value="Used">Used</option>
                         </select>
                     </div>
                 </div>
