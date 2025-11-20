@@ -112,6 +112,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['avatar'])) {
     <div class="container">
     <header>
         <div class="logo">MarketPlace 2st</div>
+        <div class="nav-links" style="display: flex; gap: 20px; margin-right: 20px;">
+            <a href="main.php" style="color: var(--accent); text-decoration: none;">Home</a>
+            <a href="item.php" style="color: var(--accent); text-decoration: none;">Buy</a>
+            <a href="profile.php" style="color: var(--accent); text-decoration: none;">Sell</a>
+            <a href="item.php" style="color: var(--accent); text-decoration: none;">Items</a>
+            <a href="ticket.php" style="color: var(--accent); text-decoration: none;">Ticket</a>
+        </div>
         <div class="userMenu">
             <div class="userAvatar"><?php echo strtoupper(substr($user['username'], 0, 1)); ?></div>
             <span><?php echo htmlspecialchars($user['username']); ?></span>
@@ -139,10 +146,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['avatar'])) {
         <div class="sidebar" id="sidebar">
             <ul class="sidebarMenu">
                 <li><a href="profile.php" class="active"><i class="fas fa-user"></i> Profile Information</a></li>
-                <li><a href="orders.php"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
-                <li><a href="wishlist.php"><i class="fas fa-heart"></i> Wishlist</a></li>
-                <li><a href="#"><i class="fas fa-shield-alt"></i> Account Security</a></li>
-                <li><a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                <li>
+                    <a href="#" onclick="toggleSellSubmenu(event)" id="sellToggle">
+                        <i class="fas fa-store"></i> Sell 
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;" id="sellChevron"></i>
+                    </a>
+                    <ul class="sub-menu" id="sellSubmenu" style="display: none; padding-left: 20px; margin-top: 10px;">
+                        <li><a href="create-product.php"><i class="fas fa-plus-circle"></i> Create New Product</a></li>
+                        <li><a href="my-products.php"><i class="fas fa-box"></i> My Products/Listings</a></li>
+                        <li><a href="sales-dashboard.php"><i class="fas fa-chart-line"></i> Sales Dashboard</a></li>
+                    </ul>
+                </li>
                 <li><a href="main.php"><i class="fas fa-home"></i> Back to Home</a></li>
                 <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
@@ -256,6 +270,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['avatar'])) {
         sidebar.classList.remove('active');
         sidebarOverlay.classList.remove('active');
     });
+    
+    // Toggle Sell submenu
+    function toggleSellSubmenu(event) {
+        event.preventDefault();
+        const submenu = document.getElementById('sellSubmenu');
+        const chevron = document.getElementById('sellChevron');
+        
+        if (submenu.style.display === 'none' || submenu.style.display === '') {
+            submenu.style.display = 'block';
+            chevron.style.transform = 'rotate(180deg)';
+        } else {
+            submenu.style.display = 'none';
+            chevron.style.transform = 'rotate(0deg)';
+        }
+    }
     </script>
 </body>
 </html>
