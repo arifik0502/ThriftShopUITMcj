@@ -23,10 +23,10 @@ $categories_result = mysqli_query($conn, $categories_sql);
         <div class="logo">MarketPlace</div>
         <div class="nav-links">
             <a href="main.php">Home</a>
+            <a href="item.php">Buy</a>
+            <a href="profile.php">Sell</a>
             <a href="item.php">Items</a>
             <a href="ticket.php">Ticket</a>
-            <a href="#">Contact</a>
-            <a href="#">News</a>
         </div>
         <div class="auth-buttons">
             <?php if (isLoggedIn()): ?>
@@ -133,7 +133,7 @@ $categories_result = mysqli_query($conn, $categories_sql);
             slides.forEach(slide => slide.classList.remove('active'));
             indicators.forEach(indicator => indicator.classList.remove('active'));
             
-            slides[index].classList.add('active');
+            slides[index].classList.add('act                      ve');
             indicators[index].classList.add('active');
             
             currentSlide = index;
