@@ -63,7 +63,8 @@ $user_bookings = [];
 if (isLoggedIn()) {
     $bookings_sql = "SELECT * FROM tickets WHERE user_id = ? ORDER BY created_at DESC LIMIT 5";
     $stmt = mysqli_prepare($conn, $bookings_sql);
-    mysqli_stmt_bind_param($stmt, "i", getUserId());
+    $userId = getUserId();
+    mysqli_stmt_bind_param($stmt, "i", $userId);
     mysqli_stmt_execute($stmt);
     $bookings_result = mysqli_stmt_get_result($stmt);
     while ($booking = mysqli_fetch_assoc($bookings_result)) {
@@ -102,11 +103,12 @@ if (isLoggedIn()) {
             <h1 style="color: var(--primary-light); font-size: 28px; font-weight: bold;">Thrift</h1>
         </div>
         <ul class="nav-links">
+            <li><a href="main.php"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="item.php"><i class="fas fa-shopping-bag"></i> Buy</a></li>
+            <li><a href="profile.php"><i class="fas fa-store"></i> Sell</a></li>
             <li><a href="#bus"><i class="fas fa-bus"></i> Bus Tickets</a></li>
             <li><a href="#train"><i class="fas fa-train"></i> Train Tickets</a></li>
             <li><a href="#grab"><i class="fas fa-car"></i> Grabs</a></li>
-            <li><a href="#offers"><i class="fas fa-percentage"></i> Offers</a></li>
-            <li><a href="main.php"><i class="fas fa-home"></i> Home</a></li>
         </ul>
     </div>
 </header>
