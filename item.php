@@ -98,10 +98,16 @@ if (isLoggedIn()) {
             </div>
             <div class="user-actions">
                 <?php if (isLoggedIn()): ?>
+                    <a href="main.php">Home</a>
+                    <a href="item.php">Buy</a>
+                    <a href="profile.php">Sell</a>
+                    <a href="ticket.php">Ticket</a>
                     <a href="profile.php">Account</a>
-                    <a href="#">Wishlist</a>
                     <a href="cart.php">Cart (<?php echo $cart_count; ?>)</a>
                 <?php else: ?>
+                    <a href="main.php">Home</a>
+                    <a href="item.php">Buy</a>
+                    <a href="ticket.php">Ticket</a>
                     <a href="login.php">Login</a>
                 <?php endif; ?>
             </div>
@@ -211,8 +217,16 @@ if (isLoggedIn()) {
             </main>
         </div>
 
-        <footer>
-            <p>&copy; Thrift 2strian copy.</p>
+        <footer style="background: #2d2d2d; color: white; margin-top: 50px;">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px 20px;">
+                <div>
+                    <h3 style="font-size: 28px; margin-bottom: 15px; color: #d4af37;">Thrift</h3>
+                    <p style="color: #b8b8b8; margin-bottom: 30px; line-height: 1.6;">Creating beautiful websites for businesses of all sizes since 2025.</p>
+                </div>
+                <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px;">
+                    <p style="color: #b8b8b8; font-size: 0.9rem;">&copy; thrift-ing since 2005.</p>
+                </div>
+            </div>
         </footer>
     </div>
 
