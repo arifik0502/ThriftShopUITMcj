@@ -236,9 +236,6 @@ $user = mysqli_fetch_assoc($user_result);
                                 <i class="fas fa-box"></i> Stock: <?php echo $product['stock']; ?>
                             </div>
                             <div class="product-meta">
-                                <i class="fas fa-info-circle"></i> Condition: <?php echo htmlspecialchars($product['condition']); ?>
-                            </div>
-                            <div class="product-meta">
                                 <i class="fas fa-calendar"></i> <?php echo date('M d, Y', strtotime($product['created_at'])); ?>
                             </div>
                             <div class="product-actions">
