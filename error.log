@@ -1,0 +1,227 @@
+[19-Nov-2025 05:03:50 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 05:03:50 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 05:04:32 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 05:04:32 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 05:05:49 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\xampp\htdocs\thriftShopUITMcj\profile.php:44
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\profile.php(44): mysqli_stmt_bind_param(Object(mysqli_stmt), 'sssiii', 'ariefffikri936@...', '0112282822', 'Dummy account', 1, 1, 1, 1)
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 44
+[19-Nov-2025 13:06:06 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 13:06:06 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 13:23:01 Europe/Berlin] 2025-11-19 13:23:01 - User logged out - User ID: 1
+[19-Nov-2025 13:23:45 Europe/Berlin] 2025-11-19 13:23:45 - New user registered - Kanade
+[19-Nov-2025 13:23:54 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'login_attempts' in 'field list' in C:\xampp\htdocs\thriftShopUITMcj\login.php:47
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\login.php(47): mysqli_prepare(Object(mysqli), 'UPDATE users SE...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\login.php on line 47
+[19-Nov-2025 13:24:47 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 13:24:47 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 13:25:18 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\thriftShopUITMcj\ticket.php on line 66
+[19-Nov-2025 13:27:37 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 13:27:37 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 13:27:44 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 13:27:44 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 13:27:50 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 13:27:50 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 14:30:14 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\thriftShopUITMcj\ticket.php on line 66
+[19-Nov-2025 14:33:12 Europe/Berlin] 2025-11-19 14:33:12 - User logged out - User ID: 3
+[19-Nov-2025 14:33:49 Europe/Berlin] 2025-11-19 14:33:49 - New user registered - Kanas
+[19-Nov-2025 14:33:58 Europe/Berlin] 2025-11-19 14:33:58 - Successful login - Kanas
+[19-Nov-2025 14:44:16 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 14:44:16 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 16:31:11 Europe/Berlin] 2025-11-19 16:31:11 - User logged out - User ID: 4
+[19-Nov-2025 16:50:39 Europe/Berlin] 2025-11-19 16:50:39 - Successful login - Kanas
+[19-Nov-2025 16:50:41 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 197
+[19-Nov-2025 16:50:41 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 208
+[19-Nov-2025 16:52:35 Europe/Berlin] 2025-11-19 16:52:35 - User logged out - User ID: 4
+[20-Nov-2025 02:28:41 Europe/Berlin] 2025-11-20 02:28:41 - Successful login - Kanade
+[20-Nov-2025 02:28:43 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 02:28:43 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 02:29:48 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'condition' in 'field list' in C:\xampp\htdocs\thriftShopUITMcj\create-product.php:58
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\create-product.php(58): mysqli_prepare(Object(mysqli), 'INSERT INTO pro...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\create-product.php on line 58
+[20-Nov-2025 02:32:39 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 02:32:39 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 02:33:15 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'condition' in 'field list' in C:\xampp\htdocs\thriftShopUITMcj\create-product.php:58
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\create-product.php(58): mysqli_prepare(Object(mysqli), 'INSERT INTO pro...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\create-product.php on line 58
+[20-Nov-2025 02:33:20 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'condition' in 'field list' in C:\xampp\htdocs\thriftShopUITMcj\create-product.php:58
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\create-product.php(58): mysqli_prepare(Object(mysqli), 'INSERT INTO pro...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\create-product.php on line 58
+[20-Nov-2025 02:33:24 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'condition' in 'field list' in C:\xampp\htdocs\thriftShopUITMcj\create-product.php:58
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\create-product.php(58): mysqli_prepare(Object(mysqli), 'INSERT INTO pro...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\create-product.php on line 58
+[20-Nov-2025 02:34:27 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 02:34:27 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 02:34:31 Europe/Berlin] 2025-11-20 02:34:31 - User logged out - User ID: 3
+[20-Nov-2025 02:34:45 Europe/Berlin] 2025-11-20 02:34:45 - Successful login - ariefffikri936@gmail.com
+[20-Nov-2025 02:35:28 Europe/Berlin] 2025-11-20 02:35:28 - User logged out - User ID: 1
+[20-Nov-2025 02:35:40 Europe/Berlin] 2025-11-20 02:35:40 - Successful login - ariefffikri936@gmail.com
+[20-Nov-2025 02:35:46 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\thriftShopUITMcj\ticket.php on line 66
+[20-Nov-2025 03:18:15 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\thriftShopUITMcj\ticket.php on line 66
+[20-Nov-2025 03:19:50 Europe/Berlin] 2025-11-20 03:19:50 - User logged out - User ID: 1
+[20-Nov-2025 05:08:29 Europe/Berlin] 2025-11-20 05:08:29 - Successful login - ariefffikri936@gmail.com
+[20-Nov-2025 07:27:11 Europe/Berlin] 2025-11-20 07:27:11 - User logged out - User ID: 1
+[20-Nov-2025 08:14:30 Europe/Berlin] 2025-11-20 08:14:30 - Successful login - ariefffikri936@gmail.com
+[20-Nov-2025 08:15:05 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'condition' in 'field list' in C:\xampp\htdocs\thriftShopUITMcj\create-product.php:58
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\create-product.php(58): mysqli_prepare(Object(mysqli), 'INSERT INTO pro...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\create-product.php on line 58
+[20-Nov-2025 08:16:26 Europe/Berlin] 2025-11-20 08:16:26 - Product created - User: 1, Product: ssss
+[20-Nov-2025 08:20:06 Europe/Berlin] 2025-11-20 08:20:06 - Product created - User: 1, Product: sar
+[20-Nov-2025 08:41:48 Europe/Berlin] 2025-11-20 08:41:48 - New user registered - aaa
+[20-Nov-2025 08:42:18 Europe/Berlin] 2025-11-20 08:42:18 - Failed login attempt - aaa
+[20-Nov-2025 08:43:36 Europe/Berlin] 2025-11-20 08:43:36 - New user registered - abc
+[20-Nov-2025 08:43:53 Europe/Berlin] 2025-11-20 08:43:53 - Successful login - abc
+[20-Nov-2025 08:43:55 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 08:43:55 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 08:44:04 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 08:44:13 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 08:44:15 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 08:53:01 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 08:53:25 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 08:53:26 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 08:53:37 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 08:53:37 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 08:54:47 Europe/Berlin] 2025-11-20 08:54:47 - Product created - User: 6, Product: Ara
+[20-Nov-2025 09:03:07 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 09:03:07 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 09:03:24 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 09:03:25 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 09:03:27 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 09:03:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'seller_id' in 'where clause' in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php:50
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php(50): mysqli_prepare(Object(mysqli), 'SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\get-product-details.php on line 50
+[20-Nov-2025 14:13:20 Europe/Berlin] 2025-11-20 14:13:20 - Failed login attempt - abc
+[20-Nov-2025 14:13:38 Europe/Berlin] 2025-11-20 14:13:38 - Login attempt for non-existent user - aa
+[20-Nov-2025 14:14:08 Europe/Berlin] 2025-11-20 14:14:08 - New user registered - Arieff
+[20-Nov-2025 14:14:20 Europe/Berlin] 2025-11-20 14:14:20 - Successful login - Arieff
+[20-Nov-2025 14:15:14 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:15:14 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:25:37 Europe/Berlin] 2025-11-20 14:25:37 - New user registered - Kanade
+[20-Nov-2025 14:25:48 Europe/Berlin] 2025-11-20 14:25:48 - Successful login - Kanade
+[20-Nov-2025 14:25:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:25:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:26:04 Europe/Berlin] 2025-11-20 14:26:04 - User logged out - User ID: 8
+[20-Nov-2025 14:27:31 Europe/Berlin] 2025-11-20 14:27:31 - Successful login - Kanade
+[20-Nov-2025 14:27:34 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:27:34 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:27:37 Europe/Berlin] 2025-11-20 14:27:37 - User logged out - User ID: 8
+[20-Nov-2025 14:35:19 Europe/Berlin] 2025-11-20 14:35:19 - Successful login - Kanade
+[20-Nov-2025 14:35:22 Europe/Berlin] 2025-11-20 14:35:22 - User logged out - User ID: 8
+[20-Nov-2025 14:35:37 Europe/Berlin] 2025-11-20 14:35:37 - Successful login - Kanade
+[20-Nov-2025 14:35:41 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:35:41 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:36:32 Europe/Berlin] 2025-11-20 14:36:32 - Product created - User: 8, Product: Lembu
+[20-Nov-2025 14:38:58 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:38:58 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:40:07 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:40:07 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:58:19 Europe/Berlin] 2025-11-20 14:58:19 - User logged out - User ID: 8
+[20-Nov-2025 14:59:20 Europe/Berlin] 2025-11-20 14:59:20 - Successful login - Kanade
+[20-Nov-2025 14:59:24 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:59:24 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 14:59:30 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 14:59:30 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 15:00:21 Europe/Berlin] 2025-11-20 15:00:21 - User logged out - User ID: 8
+[20-Nov-2025 15:03:35 Europe/Berlin] 2025-11-20 15:03:35 - Successful login - Kanade
+[20-Nov-2025 15:26:47 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[20-Nov-2025 15:26:47 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[20-Nov-2025 15:37:32 Europe/Berlin] 2025-11-20 15:37:32 - User logged out - User ID: 8
+[21-Nov-2025 03:28:57 Europe/Berlin] 2025-11-21 03:28:57 - New user registered - Abc
+[21-Nov-2025 03:29:17 Europe/Berlin] 2025-11-21 03:29:17 - Successful login - Abc
+[21-Nov-2025 03:29:25 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[21-Nov-2025 03:29:25 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[21-Nov-2025 03:29:42 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[21-Nov-2025 03:29:42 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[21-Nov-2025 03:30:40 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'Arieff' for key 'username' in C:\xampp\htdocs\thriftShopUITMcj\profile.php:46
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\profile.php(46): mysqli_stmt_execute(Object(mysqli_stmt))
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 46
+[21-Nov-2025 03:30:44 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'Arieff' for key 'username' in C:\xampp\htdocs\thriftShopUITMcj\profile.php:46
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\profile.php(46): mysqli_stmt_execute(Object(mysqli_stmt))
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 46
+[21-Nov-2025 03:30:46 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[21-Nov-2025 03:30:46 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[21-Nov-2025 03:30:48 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 211
+[21-Nov-2025 03:30:48 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 222
+[21-Nov-2025 03:31:50 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'Arieff' for key 'username' in C:\xampp\htdocs\thriftShopUITMcj\profile.php:46
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\profile.php(46): mysqli_stmt_execute(Object(mysqli_stmt))
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 46
+[21-Nov-2025 03:33:00 Europe/Berlin] 2025-11-21 03:33:00 - Product created - User: 9, Product: Things
+[21-Nov-2025 03:37:46 Europe/Berlin] 2025-11-21 03:37:46 - User logged out - User ID: 9
+[21-Nov-2025 03:38:36 Europe/Berlin] 2025-11-21 03:38:36 - Successful login - Abc
+[21-Nov-2025 03:39:42 Europe/Berlin] 2025-11-21 03:39:42 - User logged out - User ID: 9
+[21-Nov-2025 03:39:57 Europe/Berlin] 2025-11-21 03:39:57 - Successful login - Abc
+[21-Nov-2025 03:40:07 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'Arieff' for key 'username' in C:\xampp\htdocs\thriftShopUITMcj\profile.php:46
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\profile.php(46): mysqli_stmt_execute(Object(mysqli_stmt))
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 46
+[21-Nov-2025 03:40:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'Arieff' for key 'username' in C:\xampp\htdocs\thriftShopUITMcj\profile.php:46
+Stack trace:
+#0 C:\xampp\htdocs\thriftShopUITMcj\profile.php(46): mysqli_stmt_execute(Object(mysqli_stmt))
+#1 {main}
+  thrown in C:\xampp\htdocs\thriftShopUITMcj\profile.php on line 46
+[21-Nov-2025 04:47:29 Europe/Berlin] 2025-11-21 04:47:29 - User logged out - User ID: 7
+[21-Nov-2025 04:47:55 Europe/Berlin] 2025-11-21 04:47:55 - Successful login - abc
+[21-Nov-2025 04:54:22 Europe/Berlin] 2025-11-21 04:54:22 - User logged out - User ID: 9
+[21-Nov-2025 04:55:13 Europe/Berlin] 2025-11-21 04:55:13 - Successful login - Kanade
+[21-Nov-2025 04:57:08 Europe/Berlin] 2025-11-21 04:57:08 - User logged out - User ID: 9
+[21-Nov-2025 04:57:11 Europe/Berlin] 2025-11-21 04:57:11 - Successful login - Kanade
+[21-Nov-2025 04:57:13 Europe/Berlin] 2025-11-21 04:57:13 - User logged out - User ID: 8
+[21-Nov-2025 04:57:17 Europe/Berlin] 2025-11-21 04:57:17 - Successful login - Abc

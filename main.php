@@ -33,8 +33,7 @@ $categories_result = mysqli_query($conn, $categories_sql);
                 <a href="profile.php" class="btn btn-outline">Profile</a>
                 <a href="logout.php" class="btn btn-primary">Logout</a>
             <?php else: ?>
-                <a href="login.php" class="btn btn-outline">Login</a>
-                <a href="login.php" class="btn btn-primary">Sign Up</a>
+                <a href="login.php" class="btn btn-outline">Login/Sign Up</a>
             <?php endif; ?>
         </div>
     </nav>

@@ -1,0 +1,68 @@
+<!--this file sheet is for html signup
+    hadif hashim-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MarketPlace 2st | Sign Up</title>
+        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="signup-container">
+            <div class="logo">
+                <img src="" alt="Logo">
+                <h2>sign up</h2>
+            </div>
+
+            <form class="signup-form" id="signupForm">
+                <div class="input-row">
+                    <div class="input">
+                        <input type="text" id="myFirstName" placeholder="First Name" required>
+                        <div class="errMsg" id="myFirstNameErr">Please enter your first name</div>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="myLastName" placeholder="Last Name" required>
+                        <div class="errMsg" id="myLastNameErr">Please enter your last name</div>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <input type="text" id="myUsername" placeholder="Username" required>
+                    <div class="errMsg" id="myUsernameErr">Please enter a valid username</div>
+                </div>
+
+                <div class="input">
+                    <input type="email" id="myEmail" placeholder="Email" required>
+                    <div class="errMsg" id="myEmailErr">Please enter a valid email</div>
+                </div>
+
+                <div class="input">
+                    <input type="password" id="myPassword" placeholder="Password" required>
+                    <div class="errMsg" id="myPasswordErr">Password must be at least 6 characters</div>
+                </div>
+
+                <div class="input">
+                    <input type="password" id="myConfirmPassword" placeholder="Confirm Password" required>
+                    <div class="errMsg" id="myConfirmPasswordErr">Passwords must match</div>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="myTerms" required>
+                    <label for="myTerms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="signupButt">Sign Up</button>
+
+                <div class="button-container">
+                    <a href="login.php" class="return-btn">
+                        <i class="fas fa-arrow-left"></i> Return to Login
+                    </a>
+                </div>
+
+                <div class="login-link">Already have an account? <a href="login.php">Login now</a></div>
+            </form>
+        </div>
+    </body>
+</html>

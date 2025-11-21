@@ -1,4 +1,4 @@
-/*this file sheet is for css
+/*this file sheet is for css signup
     hadif hashim*/
     
 :root {
@@ -9,14 +9,12 @@
     --accent: #d4af37;
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 body {
     background-color: var(--dark);
@@ -25,7 +23,6 @@ body {
     display: flex;
     overflow: hidden;
 }
-
 
 .logo {
     text-align: center;
@@ -44,10 +41,7 @@ body {
     font-weight: 700;
 }
 
-
-
-
-.login-container {
+.signup-container {
     width: 100%;
     max-width: 450px;
     margin: auto;
@@ -60,11 +54,23 @@ body {
     z-index: 1;
     animation: fadeIn 0.8s ease-out;
 }
-.login-form .input-group {
+
+.input-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-row .input {
+    flex: 1;
+}
+
+.signup-form .input-group {
     position: relative;
     margin-bottom: 1.5rem;
 }
-.login-form input {
+
+.signup-form input {
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
     background: rgba(255, 255, 255, 0.1);
@@ -74,43 +80,42 @@ body {
     font-size: 1rem;
     transition: all 0.3s;
 }
-.login-form input:focus {
+
+.signup-form input:focus {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.3);
 }
-.login-form input::placeholder {
+
+.signup-form input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.inputOpt {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
-}
-
-
-.rememberMe {
+.terms {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
-.rememberMe input {
-    accent-color: var(--secondary);
+
+.terms input {
+    margin-top: 0.2rem;
+    accent-color: var(--accent);
 }
-.fgtPassword a {
+
+.terms a {
     color: var(--accent);
     text-decoration: none;
     transition: color 0.3s;
 }
-.fgtPassword a:hover {
-    color: var(--secondary);
+
+.terms a:hover {
+    color: var(--light);
 }
 
-
-.loginButt {
+.signupButt {
     width: 100%;
     padding: 1rem;
     background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -123,69 +128,58 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 1.5rem;
 }
-.loginButt:hover {
+
+.signupButt:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px var(--accent);
 }
-.loginButt:active {
+
+.signupButt:active {
     transform: translateY(-1px);
 }
 
-
-.divider {
-    display: flex;
-    align-items: center;
-    margin: 1.5rem 0;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.9rem;
-}
-.divider::before, .divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.divider::before {
-    margin-right: 1rem;
-}
-.divider::after {
-    margin-left: 1rem;
-}
-
-
-.socLogin {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+.button-container {
     margin-bottom: 1.5rem;
+    text-align: center;
 }
-.social-btn {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
+
+.return-btn {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    transition: all 0.3s;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #495057, #6c757d);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.social-btn:hover {
+
+.return-btn:hover {
     transform: translateY(-3px);
-    background: var(--secondary);
     box-shadow: 0 10px 20px var(--accent);
 }
-.register-link {
+
+.return-btn:active {
+    transform: translateY(-1px);
+}
+
+.login-link {
     text-align: center;
     font-size: 0.9rem;
 }
-.register-link a {
+
+.login-link a {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
-.register-link a:hover {
+
+.login-link a:hover {
     color: var(--light);
 }
 
@@ -197,18 +191,28 @@ body {
     display: none;
 }
 
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 576px) {
-    .login-container {
+    .signup-container {
         margin: auto 1rem;
         padding: 1.5rem;
     }
     .logo img {
         height: 50px;
+    }
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .button-container {
+        margin-bottom: 1rem;
+    }
+    .return-btn {
+        width: 100%;
+        justify-content: center;
     }
 }

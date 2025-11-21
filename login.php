@@ -1,5 +1,5 @@
 <?php
-/*this file sheet is for php login
+/*this file sheet is for php login with sliding animation
     hadif hashim*/
 
 require_once 'config.php';
@@ -139,135 +139,393 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarketPlace 2st | Login</title>
-    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --white: #e9e9e9;
+            --gray: #333;
+            --blue: #0367a6;
+            --lightblue: #008997;
+            --accent: #d4af37;
+            --button-radius: 0.7rem;
+            --max-width: 850px;
+            --max-height: 500px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .error-message, .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 8px;
+            z-index: 10000;
+            animation: slideIn 0.5s;
+        }
+
+        .error-message {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .success-message {
+            background: #51cf66;
+            color: white;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .form__title {
+            font-weight: 400;
+            margin: 0 0 1.25rem;
+            color: var(--gray);
+        }
+
+        .link {
+            color: var(--blue);
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            text-decoration: none;
+            display: block;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            background-color: var(--white);
+            border-radius: var(--button-radius);
+            box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25), 0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+            height: var(--max-height);
+            max-width: var(--max-width);
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .container__form {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .container--signin {
+            left: 0;
+            width: 50%;
+            z-index: 2;
+        }
+
+        .container.right-panel-active .container--signin {
+            transform: translateX(100%);
+        }
+
+        .container--signup {
+            left: 0;
+            opacity: 0;
+            width: 50%;
+            z-index: 1;
+        }
+
+        .container.right-panel-active .container--signup {
+            animation: show 0.6s;
+            opacity: 1;
+            transform: translateX(100%);
+            z-index: 5;
+        }
+
+        .container__overlay {
+            height: 100%;
+            left: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            transition: transform 0.6s ease-in-out;
+            width: 50%;
+            z-index: 100;
+        }
+
+        .container.right-panel-active .container__overlay {
+            transform: translateX(-100%);
+        }
+
+        .overlay {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            left: -100%;
+            position: relative;
+            transform: translateX(0);
+            transition: transform 0.6s ease-in-out;
+            width: 200%;
+        }
+
+        .container.right-panel-active .overlay {
+            transform: translateX(50%);
+        }
+
+        .overlay__panel {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            transform: translateX(0);
+            transition: transform 0.6s ease-in-out;
+            width: 50%;
+            color: white;
+            padding: 0 2rem;
+        }
+
+        .overlay__panel h1 {
+            margin-bottom: 1rem;
+        }
+
+        .overlay__panel p {
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .overlay--left {
+            transform: translateX(-20%);
+        }
+
+        .container.right-panel-active .overlay--left {
+            transform: translateX(0);
+        }
+
+        .overlay--right {
+            right: 0;
+            transform: translateX(0);
+        }
+
+        .container.right-panel-active .overlay--right {
+            transform: translateX(20%);
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+            border-radius: 20px;
+            border: 1px solid var(--blue);
+            color: white;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            padding: 0.9rem 4rem;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .form {
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 3rem;
+            height: 100%;
+            text-align: center;
+        }
+
+        .input {
+            background-color: #fff;
+            border: 2px solid #e0e0e0;
+            padding: 0.9rem;
+            margin: 0.5rem 0;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: var(--blue);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            width: 100%;
+        }
+
+        .checkbox-container input {
+            width: auto;
+        }
+
+        .home-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: white;
+            color: var(--blue);
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .home-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        @keyframes show {
+            0%, 49.99% {
+                opacity: 0;
+                z-index: 1;
+            }
+            50%, 100% {
+                opacity: 1;
+                z-index: 5;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%;
+                height: auto;
+                min-height: 500px;
+            }
+            
+            .overlay__panel {
+                padding: 1rem;
+            }
+            
+            .form {
+                padding: 0 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="login-container">
-        <div class="logo">
-            <img src="" alt="">
-            <h2>login</h2>
+    <a href="main.php" class="home-link">
+        <i class="fas fa-home"></i> Back to Home
+    </a>
+
+    <?php if ($error): ?>
+        <div class="error-message">
+            <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($error); ?>
         </div>
+    <?php endif; ?>
 
-        <?php if ($error): ?>
-            <div style="color: #ff6b6b; text-align: center; margin-bottom: 15px; padding: 10px; background: rgba(255, 107, 107, 0.1); border-radius: 5px;">
-                <?php echo htmlspecialchars($error); ?>
-            </div>
-        <?php endif; ?>
+    <?php if ($success): ?>
+        <div class="success-message">
+            <i class="fas fa-check-circle"></i> <?php echo htmlspecialchars($success); ?>
+        </div>
+    <?php endif; ?>
 
-        <?php if ($success): ?>
-            <div style="color: #51cf66; text-align: center; margin-bottom: 15px; padding: 10px; background: rgba(81, 207, 102, 0.1); border-radius: 5px;">
-                <?php echo htmlspecialchars($success); ?>
-            </div>
-        <?php endif; ?>
-
-        <form class="login-form" id="loginForm" method="POST" action="">
-            <?php echo csrfField(); ?>
-            
-            <div class="input">
-                <input type="text" id="myUsername" name="username" placeholder="Username or Email" required>
-                <div class="errMsg" id="myUsernameErr">Please enter valid Username</div>
-            </div>
-
-            <div class="input">
-                <input type="password" id="myPassword" name="password" placeholder="Password" required>
-                <div class="errMsg" id="myPasswordErr">Your Password is incorrect</div>
-            </div>
-
-            <div class="inputOpt">
-                <div class="rememberMe">
-                    <input type="checkbox" id="myRemember" name="remember">
-                    <label for="myRemember">Remember me</label>
-                </div>
-                <div class="fgtPassword">
-                    <a href="forgot-password.php">Forgot password?</a>
-                </div>
-            </div>
-
-            <button type="submit" name="login" class="loginButt">Login</button>
-            
-            <div class="register-link">New here? <a href="#" onclick="showRegisterModal(); return false;">Create an Account now</a></div>
-        </form>
-    </div>
-
-    <div id="registerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center;">
-        <div style="background: rgba(26, 26, 46, 0.9); padding: 30px; border-radius: 20px; max-width: 400px; width: 90%;">
-            <h2 style="color: var(--accent); margin-bottom: 20px;">Create Account</h2>
-            <form method="POST" action="" onsubmit="return validateRegistration()">
+    <div class="container" id="container">
+        <!-- Sign Up -->
+        <div class="container__form container--signup">
+            <form action="" method="POST" class="form" id="form1">
                 <?php echo csrfField(); ?>
-                <input type="text" name="reg_username" id="reg_username" placeholder="Username" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
-                <input type="email" name="reg_email" id="reg_email" placeholder="Email" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
-                <input type="password" name="reg_password" id="reg_password" placeholder="Password (min 8 chars, 1 uppercase, 1 number)" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
-                <div id="password-strength" style="margin-bottom: 15px; color: #fff; font-size: 12px;"></div>
-                <button type="submit" name="register" class="loginButt">Register</button>
-                <button type="button" onclick="hideRegisterModal()" style="width: 100%; margin-top: 10px; padding: 12px; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; cursor: pointer;">Cancel</button>
+                <h2 class="form__title">Create Account</h2>
+                <input type="text" name="reg_username" placeholder="Username" class="input" required />
+                <input type="email" name="reg_email" placeholder="Email" class="input" required />
+                <input type="password" name="reg_password" placeholder="Password" class="input" required />
+                <small style="color: #666; margin: 0.5rem 0;">Min 8 chars, 1 uppercase, 1 number</small>
+                <button type="submit" name="register" class="btn" style="margin-top: 1rem;">Sign Up</button>
             </form>
+        </div>
+    
+        <!-- Sign In -->
+        <div class="container__form container--signin">
+            <form action="" method="POST" class="form" id="form2">
+                <?php echo csrfField(); ?>
+                <h2 class="form__title">Sign In</h2>
+                <input type="text" name="username" placeholder="Username or Email" class="input" required />
+                <input type="password" name="password" placeholder="Password" class="input" required />
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="forgot-password.php" class="link">Forgot your password?</a>
+                <button type="submit" name="login" class="btn">Sign In</button>
+            </form>
+        </div>
+    
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="btn" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="btn" id="signUp">Sign Up</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        function showRegisterModal() {
-            document.getElementById('registerModal').style.display = 'flex';
-        }
-        
-        function hideRegisterModal() {
-            document.getElementById('registerModal').style.display = 'none';
-        }
-        
-        function validateRegistration() {
-            const password = document.getElementById('reg_password').value;
-            const username = document.getElementById('reg_username').value;
-            
-            if (username.length < 3) {
-                alert('Username must be at least 3 characters long');
-                return false;
-            }
-            
-            if (password.length < 8) {
-                alert('Password must be at least 8 characters long');
-                return false;
-            }
-            
-            if (!/[A-Z]/.test(password)) {
-                alert('Password must contain at least one uppercase letter');
-                return false;
-            }
-            
-            if (!/[a-z]/.test(password)) {
-                alert('Password must contain at least one lowercase letter');
-                return false;
-            }
-            
-            if (!/[0-9]/.test(password)) {
-                alert('Password must contain at least one number');
-                return false;
-            }
-            
-            return true;
-        }
-        
-        document.getElementById('reg_password')?.addEventListener('input', function() {
-            const password = this.value;
-            const strength = document.getElementById('password-strength');
-            let score = 0;
-            
-            if (password.length >= 8) score++;
-            if (/[A-Z]/.test(password)) score++;
-            if (/[a-z]/.test(password)) score++;
-            if (/[0-9]/.test(password)) score++;
-            if (/[^A-Za-z0-9]/.test(password)) score++;
-            
-            if (score < 3) {
-                strength.textContent = 'Weak password';
-                strength.style.color = '#ff6b6b';
-            } else if (score < 4) {
-                strength.textContent = 'Medium strength';
-                strength.style.color = '#ffd43b';
-            } else {
-                strength.textContent = 'Strong password';
-                strength.style.color = '#51cf66';
-            }
+        const signInBtn = document.getElementById("signIn");
+        const signUpBtn = document.getElementById("signUp");
+        const container = document.getElementById("container");
+
+        signInBtn.addEventListener("click", () => {
+            container.classList.remove("right-panel-active");
         });
+
+        signUpBtn.addEventListener("click", () => {
+            container.classList.add("right-panel-active");
+        });
+
+        // Auto-hide messages after 5 seconds
+        setTimeout(() => {
+            const messages = document.querySelectorAll('.error-message, .success-message');
+            messages.forEach(msg => {
+                msg.style.animation = 'slideIn 0.5s reverse';
+                setTimeout(() => msg.remove(), 500);
+            });
+        }, 5000);
     </script>
 </body>
 </html>
